@@ -9,7 +9,10 @@ function App() {
           icon: ({ stroke, fill }: { stroke: string; fill: string }) => (
         <LocationEdit className="w-5 h-5" stroke={stroke} fill={fill} />
       ),
-          content: <div>Postcode Content</div>
+          content: <div>
+            <p>Postcode Content. </p>
+           <strong className="text-lg">Press <span className="text-primary">next</span> to see challenge solution</strong> 
+            </div>
       },
       {
           label: "Select Skip",

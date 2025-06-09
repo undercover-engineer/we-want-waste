@@ -38,44 +38,44 @@ export default function Skip() {
   return (
     <div className="w-full">
 
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 pr-4">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 xl:gap-4 pr-4">
         {skips && skips.map((skip: SkipProps) => (
-          <div
+            <div
             key={skip.id}
-            className="border-[1px] border-primary rounded-xl p-4 lg:px-9 flex flex-col h-full"
-          >
+            className="shadow-lg rounded-xl py-4 px-2 md:px-6 lg:px-9 xl:px-12 flex flex-col h-full"
+            >
             <div>
               <img src="/assets/skip-bin.png" alt="image of a Skip"/>
             </div>
-            <div className="flex flex-col justify-between items-start mt-4 md:flex-row md:items-center xl:w-10/12 xl:mx-auto">
+            <div className="flex flex-col justify-between items-start mt-4 md:flex-row md:items-center md:w-11/12 md:mx-auto">
               <div className="text-lg md:text-xl xl:text-2xl text-yellow-500 font-bold mb-1">
-                {`${skip.size} Yard Skip`}
+              {`${skip.size} Yard Skip`}
               </div>
               <p className="text-sm md:text-[15px] xl:text-[16px] text-gray-400">
               {`${skip.hire_period_days} Day Hire`}
             </p>
             </div>
 
-            <p className="text-sm md:text-[16px] text-gray-400 mb-4 text-left mt-2 xl:w-10/12  xl:mx-auto">
+            <p className="text-sm md:text-[16px] text-gray-400 mb-4 text-left mt-2 md:w-11/12 md:mx-auto">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
               aliquam.
             </p>
 
-            <div className="text-lg md:py-2 font-semibold bg-yellow-500 rounded-md text-black xl:w-10/12  xl:mx-auto">
+            <div className="text-lg md:py-2 font-semibold bg-yellow-500 rounded-md text-black md:w-11/12  md:mx-auto">
               £{skip.price_before_vat}
             </div>
 
             <button
               onClick={() => setSelectedSkipId(skip.id)}
-              className={`mt-3 px-4 py-1.5 lg:py-2 rounded-md text-sm font-medium transition-all xl:w-10/12 xl:mx-auto ${
-                selectedSkipId === skip.id
-                  ? "bg-primary"
-                  : "border-2 border-primary"
+              className={`mt-3 px-4 py-1.5 lg:py-2 rounded-md text-sm font-medium transition-all md:w-11/12 md:mx-auto ${
+              selectedSkipId === skip.id
+                ? "bg-primary"
+                : "border-2 border-primary"
               }`}
             >
               {selectedSkipId === skip.id ? "Selected Skip" : "Select Skip"}
             </button>
-          </div>
+            </div>
         ))}
       </div>
     </div>

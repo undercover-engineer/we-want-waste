@@ -42,7 +42,7 @@ export default function Skip() {
         {skips && skips.map((skip: SkipProps) => (
             <div
             key={skip.id}
-            className="shadow-[0_0_5px_rgba(0,0,0,0.2)] rounded-xl py-4 px-2 md:px-6 lg:px-9 xl:px-12 flex flex-col h-full"
+            className="shadow-[0_0_5px_rgba(0,0,0,0.2)] rounded-xl py-4 px-2 md:px-6  xl:px-12 flex flex-col h-full"
             >
             <div>
               <img src="/assets/skip-bin.png" alt="image of a Skip"/>
@@ -60,14 +60,17 @@ export default function Skip() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
               aliquam.
             </p>
-
-            <div className="text-lg md:py-2 font-semibold bg-yellow-500 rounded-md text-black md:w-11/12  md:mx-auto">
-              £{skip.price_before_vat}
+            <div className="flex items-center md:w-11/12  md:mx-auto justify-between">
+            <div>
+              <p className="text-sm md:text-lg font-semibold">
+                £{skip.price_before_vat}
+                <small className="font-extralight max-[520px]:hidden"> (excl VAT) </small>
+              </p>
             </div>
 
             <button
               onClick={() => setSelectedSkipId(skip.id)}
-              className={`mt-3 px-4 py-1.5 lg:py-2 rounded-md text-sm font-medium transition-all md:w-11/12 md:mx-auto ${
+              className={`px-1 md:px-2 py-1 xl:px-4 xl:py-1.5 rounded-md md:text-[15px] font-medium transition-all md:w-fit ${
               selectedSkipId === skip.id
                 ? "bg-primary"
                 : "border-2 border-primary"
@@ -75,6 +78,7 @@ export default function Skip() {
             >
               {selectedSkipId === skip.id ? "Selected Skip" : "Select Skip"}
             </button>
+            </div>
             </div>
         ))}
       </div>

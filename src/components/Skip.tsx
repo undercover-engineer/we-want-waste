@@ -47,7 +47,7 @@ export default function Skip() {
             <div>
               <img src="/assets/skip-bin.png" alt="image of a Skip"/>
             </div>
-            <div className="flex flex-col justify-between items-start mt-4 md:flex-row md:items-center xl:w-11/12">
+            <div className="flex flex-col justify-between items-start mt-4 md:flex-row md:items-center xl:w-10/12 xl:mx-auto">
               <div className="text-lg md:text-xl xl:text-2xl text-yellow-500 font-bold mb-1">
                 {`${skip.size} Yard Skip`}
               </div>
@@ -56,18 +56,18 @@ export default function Skip() {
             </p>
             </div>
 
-            <p className="text-sm md:text-[16px] text-gray-400 mb-4 text-left mt-2 xl:w-11/12">
+            <p className="text-sm md:text-[16px] text-gray-400 mb-4 text-left mt-2 xl:w-10/12  xl:mx-auto">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
               aliquam.
             </p>
 
-            <div className="text-lg md:py-2 font-semibold bg-yellow-500 rounded-md text-black">
+            <div className="text-lg md:py-2 font-semibold bg-yellow-500 rounded-md text-black xl:w-10/12  xl:mx-auto">
               £{skip.price_before_vat}
             </div>
 
             <button
               onClick={() => setSelectedSkipId(skip.id)}
-              className={`mt-3 px-4 py-1.5 lg:py-2 rounded-md text-sm font-medium transition-all ${
+              className={`mt-3 px-4 py-1.5 lg:py-2 rounded-md text-sm font-medium transition-all xl:w-10/12 xl:mx-auto ${
                 selectedSkipId === skip.id
                   ? "bg-primary"
                   : "border-2 border-primary"

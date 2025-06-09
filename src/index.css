@@ -11,3 +11,6 @@
     --color-primary: #ffbb29;
     --color-secondary: #c4c4c4
 }
+.datepicker-input {
+  width: 12ch; /* Adjust based on date format */
+}

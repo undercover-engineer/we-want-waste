@@ -1,27 +1,35 @@
 import { CreditCard, FileCheck, LocationEdit, Truck } from "lucide-react"
 import Stepper from "./components/Stepper"
-import Skip from "./components/Steps/Skip"
+import SkipSelection from "./components/Steps/Skip"
 
 function App() {
   const steps=[
       {
           label: "Postcode",
-          icon: <LocationEdit className="w-5 h-5" stroke="#676767" fill="#dfdfdf"/>,
+          icon: ({ stroke, fill }: { stroke: string; fill: string }) => (
+        <LocationEdit className="w-5 h-5" stroke={stroke} fill={fill} />
+      ),
           content: <div>Postcode Content</div>
       },
       {
           label: "Select Skip",
-          icon: <Truck className="w-5 h-5" stroke="#676767" fill="#dfdfdf"/>,
-          content: <Skip/>
+          icon: ({ stroke, fill }: { stroke: string; fill: string }) => (
+        <Truck className="w-5 h-5" stroke={stroke} fill={fill} />
+      ),
+          content: <SkipSelection/>
       },
       {
           label: "Permit Check",
-          icon: <FileCheck className="w-5 h-5" stroke="#676767" fill="#dfdfdf"/>,
+          icon: ({ stroke, fill }: { stroke: string; fill: string }) => (
+        <FileCheck className="w-5 h-5" stroke={stroke} fill={fill} />
+      ),
           content: <div>Permit Check Content</div>
       },
       {
           label: "Payment",
-          icon: <CreditCard className="w-5 h-5" stroke="#676767" fill="#dfdfdf"/>,
+          icon: ({ stroke, fill }: { stroke: string; fill: string }) => (
+        <CreditCard className="w-5 h-5" stroke={stroke} fill={fill} />
+      ),
           content: <div>Payment Content</div> 
       }
   ]

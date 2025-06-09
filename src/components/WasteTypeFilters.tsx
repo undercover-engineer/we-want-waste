@@ -10,7 +10,7 @@ export default function WasteTypeFilters({wasteTypes, selectedWasteTypes, onSele
                 <button 
                 key={wasteType}
                 onClick={()=>onSelect(wasteType)}
-                className={`px-3 py-1 rounded-md border-2 border-primary ${selectedWasteTypes.includes(wasteType) ? "bg-primary" : "bg-white"}`}
+                className={`px-3 py-1 rounded-3xl text-xs border-2 border-primary md:text-sm ${selectedWasteTypes.includes(wasteType) ? "bg-primary" : "bg-white"}`}
                 >
                  {wasteType}
                 </button>

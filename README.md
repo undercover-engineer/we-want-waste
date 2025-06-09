@@ -3,6 +3,9 @@
 A responsive React application for selecting and ordering waste skips based on user location, built with modern libraries and patterns for performance, maintainability, and an intuitive user experience.
 
 ---
+## 📸 Preview
+![Desktop](./public/assets/desktop.png)
+![Mobile](./public/assets/mobile.jpg)
 
 ## 🔍 Overview
 

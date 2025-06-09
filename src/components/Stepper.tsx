@@ -82,8 +82,8 @@ export default function Stepper({steps, initialStep=0, persistentKey, onStepChan
 
    {/* Navigation */}
    <div className="flex justify-around gap-5 my-5">
-    <button onClick={handlePrev} disabled={currentStep===0} className="border-2 border-primary rounded-md px-4 py-0.5">Prev</button>
-    <button onClick={handleNext} disabled={currentStep=== steps.length-1} className="border-2 border-primary rounded-md  px-4 py-0.5">Next</button>
+    <button onClick={handlePrev} disabled={currentStep===0} className="border-2 border-primary rounded-md px-4 py-0.5 lg:px-8 lg:py-1">Prev</button>
+    <button onClick={handleNext} disabled={currentStep=== steps.length-1} className="border-2 border-primary rounded-md px-4 py-0.5 lg:px-8 lg:py-1">Next</button>
    </div>
 </>
 )

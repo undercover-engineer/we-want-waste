@@ -47,21 +47,21 @@ export default function Skip() {
             <div>
               <img src="/assets/skip-bin.png" alt="image of a Skip"/>
             </div>
-            <div className="flex flex-col justify-between items-start mt-4">
-              <div className="text-lg lg:text-2xl text-yellow-500 font-bold mb-1">
+            <div className="flex flex-col justify-between items-start mt-4 md:flex-row md:items-center xl:w-11/12">
+              <div className="text-lg md:text-xl xl:text-2xl text-yellow-500 font-bold mb-1">
                 {`${skip.size} Yard Skip`}
               </div>
-              <p className="text-sm lg:text-md text-gray-400">
+              <p className="text-sm md:text-[15px] xl:text-[16px] text-gray-400">
               {`${skip.hire_period_days} Day Hire`}
             </p>
             </div>
 
-            <p className="text-sm text-gray-400 mb-4 text-left mt-2">
+            <p className="text-sm md:text-[16px] text-gray-400 mb-4 text-left mt-2 xl:w-11/12">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
               aliquam.
             </p>
 
-            <div className="text-lg lg:py-2 font-semibold bg-yellow-500 rounded-md text-black">
+            <div className="text-lg md:py-2 font-semibold bg-yellow-500 rounded-md text-black">
               £{skip.price_before_vat}
             </div>
 

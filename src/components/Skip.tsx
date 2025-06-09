@@ -42,7 +42,7 @@ export default function Skip() {
         {skips && skips.map((skip: SkipProps) => (
             <div
             key={skip.id}
-            className="shadow-lg rounded-xl py-4 px-2 md:px-6 lg:px-9 xl:px-12 flex flex-col h-full"
+            className="shadow-[0_0_5px_rgba(0,0,0,0.2)] rounded-xl py-4 px-2 md:px-6 lg:px-9 xl:px-12 flex flex-col h-full"
             >
             <div>
               <img src="/assets/skip-bin.png" alt="image of a Skip"/>

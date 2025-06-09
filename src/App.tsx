@@ -1,6 +1,7 @@
 import { CreditCard, FileCheck, LocationEdit, Truck } from "lucide-react"
 import Stepper from "./components/Stepper"
 import SkipSelection from "./components/Steps/Skip"
+import { StepperNavRefProvider } from "./contexts";
 
 function App() {
   const steps=[
@@ -37,9 +38,9 @@ function App() {
       }
   ]
   return (
-    <>
-      <Stepper steps={steps} persistentKey="form-step"/>
-    </>
+    <StepperNavRefProvider>
+      <Stepper steps={steps} persistentKey="form-step" />
+    </StepperNavRefProvider>
   )
 }
 

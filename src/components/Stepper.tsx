@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react"
+import { useStepperNavRef } from "../contexts";
 
 interface StepProps{
     label?: string
@@ -16,6 +17,7 @@ interface StepperProps{
 
 export default function Stepper({steps, initialStep=0, persistentKey, onStepChange}: StepperProps) {
    const [currentStep, setCurrentStep] = useState(initialStep)
+   const navRef = useStepperNavRef();
    useEffect(()=>{
     if(persistentKey){
         const savedStep = localStorage.getItem(persistentKey)
@@ -78,13 +80,14 @@ export default function Stepper({steps, initialStep=0, persistentKey, onStepChan
         </div>
 
    {/* Show Step Content */}
-   <div className="text-center md:w-11/12 mx-auto">{steps[currentStep].content}</div>
+   <div className="text-center md:w-11/12 xl:w-10/12 mx-auto">{steps[currentStep].content}</div>
 
    {/* Navigation */}
-   <div className="flex justify-around gap-5 my-5">
-    <button onClick={handlePrev} disabled={currentStep===0} className="border-2 border-primary rounded-md px-4 py-0.5 lg:px-8 lg:py-1">Prev</button>
+    <div className="flex md:w-11/12 xl:w-7/12 mx-auto justify-end xl:pr-2 pr-4 gap-5 my-5" ref={navRef}>
+    <button onClick={handlePrev} disabled={currentStep===0} className="bg-primary rounded-md px-4 py-0.5 lg:px-8 lg:py-1">Prev</button>
     <button onClick={handleNext} disabled={currentStep=== steps.length-1} className="border-2 border-primary rounded-md px-4 py-0.5 lg:px-8 lg:py-1">Next</button>
    </div>
+   
 </>
 )
 }

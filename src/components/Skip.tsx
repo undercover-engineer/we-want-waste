@@ -38,20 +38,20 @@ export default function Skip() {
   return (
     <div className="w-full">
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 pr-4">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 pr-4">
         {skips && skips.map((skip: SkipProps) => (
           <div
             key={skip.id}
-            className="border-[1px] border-primary rounded-xl p-4 flex flex-col h-full"
+            className="border-[1px] border-primary rounded-xl p-4 lg:px-9 flex flex-col h-full"
           >
             <div>
-              <img src="/public/assets/skip-bin.png" alt="image of a Skip"/>
+              <img src="/assets/skip-bin.png" alt="image of a Skip"/>
             </div>
             <div className="flex flex-col justify-between items-start mt-4">
-              <div className="text-lg text-yellow-500 font-bold mb-1">
+              <div className="text-lg lg:text-2xl text-yellow-500 font-bold mb-1">
                 {`${skip.size} Yard Skip`}
               </div>
-              <p className="text-sm text-gray-400">
+              <p className="text-sm lg:text-md text-gray-400">
               {`${skip.hire_period_days} Day Hire`}
             </p>
             </div>
@@ -61,13 +61,13 @@ export default function Skip() {
               aliquam.
             </p>
 
-            <div className="text-lg font-semibold bg-yellow-500 rounded-lg text-black">
+            <div className="text-lg lg:py-2 font-semibold bg-yellow-500 rounded-md text-black">
               £{skip.price_before_vat}
             </div>
 
             <button
               onClick={() => setSelectedSkipId(skip.id)}
-              className={`mt-3 px-4 py-1.5 rounded-md text-sm font-medium transition-all ${
+              className={`mt-3 px-4 py-1.5 lg:py-2 rounded-md text-sm font-medium transition-all ${
                 selectedSkipId === skip.id
                   ? "bg-primary"
                   : "border-2 border-primary"
